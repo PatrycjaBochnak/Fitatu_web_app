@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  background-color: slategray;
+  height: 100%;
+  width: 100%;
+}
+.carousel {
+  height: 79vh;
+  width: 50%;
+  background-color: lightslategray;
+}
+.carosuel-root {
+  width: 50%
+}
+.appContainer {
+  display: flex;
+}
+
+.searcher {
+  width: 50%;
+}
+.searchField {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+
+.searchResults {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.NavBar {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: white;
+}
+
+.carousel-status {
+  display: none;
+}
