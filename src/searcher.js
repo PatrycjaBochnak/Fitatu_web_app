@@ -31,33 +31,31 @@ class Searcher extends React.Component {
             <div className={'searcher'}>
                 <div className={'searchField'}>
                     <input type="text" placeholder="Search.." name="search" onChange={this.onInputchange}/>
-                    <button type="submit" onClick={() => this.view()}><i className="fa fa-search"></i></button>
+                    <button classname="clicker" type="submit" onClick={() => this.view()}>Click!<i className="fa fa-search"></i></button>
                 </div>
                 {this.state.recipes ? (
-                    <table className="searchResults">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Calories</th>
-                            <th>Fats</th>
-                            <th>Carbs</th>
-                            <th>Proteins</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                    <div className="searchResults">
+                        <div className="row">
+                            <div className="col-md-6">Name</div>
+                            <div className="col-md-1">Calories</div>
+                            <div className="col-md-1">Fats</div>
+                            <div className="col-md-1">Carbs</div>
+                            <div className="col-md-1">Proteins</div>
+                        </div>
+                        
                         {Object.keys(this.state.recipes).map(key => {
                             return (
                                 <>
-                                    <tr>
-                                        <td>{this.state.recipes[key].title}</td>
-                                        <td>{this.state.recipes[key].nutrition.calories}</td>
-                                        <td>{this.state.recipes[key].nutrition.fat}</td>
-                                        <td>{this.state.recipes[key].nutrition.carbs}</td>
-                                        <td>{this.state.recipes[key].nutrition.protein}</td>
-                                        <td>
-                                            <select name="day" onChange={(e) => {console.log(e.target); this.props. setCurrentProduct({title: this.state.recipes[key].title, nutrition: this.state.recipes[key].nutrition, partOfDay: e.target.value})}}>
+                                    <div className='row'>
+                                    <div className="col-md-6">{this.state.recipes[key].title}</div>
+                                    <div className="col-md-1">{this.state.recipes[key].nutrition.calories}</div>
+                                    <div className="col-md-1">{this.state.recipes[key].nutrition.fat}</div>
+                                    <div className="col-md-1">{this.state.recipes[key].nutrition.carbs}</div>
+                                    <div className="col-md-1">{this.state.recipes[key].nutrition.protein}</div>
+                                    <div className="col-md-2">
+                                            <select name="day" onChange={(e) => {console.log(e.target); this.props. setCurrentProduct({title: this.state.recipes[key].title, nutrition: this.state.recipes[key].nutrition, partOfDay: e.target.value})}} style={{width: "90%"}}>
                                                 <option value={"choose part of day"}>
-                                                    Choose part of day 
+                                                    Choose 
                                                 </option>                                              
                                                 <option value={"breakfast"}>
                                                     Breakfast
@@ -72,13 +70,12 @@ class Searcher extends React.Component {
                                                     Supper
                                                 </option>
                                             </select>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </div>
                                 </>
                             )
                         })}
-                        </tbody>
-                    </table>
+                    </div>
                 ) : ''}
             </div>
         );

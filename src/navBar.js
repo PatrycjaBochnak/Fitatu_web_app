@@ -1,28 +1,17 @@
 import React from "react";
-
+import logo from "./images/logo.png";
 
 function NavBar () {
     return (
-        <div className="NavBar">
-            <nav className="navbar navbar-default">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="#">Calories calculator</a>
+            <div className="navBar">
+                <img src={logo} alt="logo"/>
+                <p>Search for the dishes you ate and add them to the appropriate time of day to count your daily results</p>
+                    <div className="buttons">
+                        <a href="/">Calculator</a>
+                        <a href="/aboutProject">About project</a>
+                        <a href="/">Contact</a>
                     </div>
-                    <div>
-                    <ul className="nav navbar-nav">
-                        <li className="active"><a href="/">Home</a></li>
-                        <li><a href="/aboutProject">About project</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    </div>
-                </div>
-            </nav>
-            <div className="container">
-                <h3>Welcome to Fitatu Web App</h3>
-                <p>Tralala</p>
             </div>
-        </div>
     );
 }
 

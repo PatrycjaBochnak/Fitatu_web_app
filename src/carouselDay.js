@@ -73,13 +73,13 @@ class CarouselDay extends React.Component {
 
     render() {
         return (
-            <Carousel autoPlay={false} showThumbs={false} handleClickItem={(activeIndex) => this.setState({...this.state, activeIndex: activeIndex})}>
+            <Carousel autoPlay={false} showThumbs={false} onChange={(activeIndex) => this.setState({...this.state, activeIndex: activeIndex})} style={{width: '50%'}}>
                 <div>
                     <h3>Monday</h3>
                     <ListResult list={this.state["Monday"]}/>
                 </div>
                 <div>
-                    <h3>Thursday</h3>
+                    <h3>Tuesday</h3>
                     <ListResult list={this.state["Tuesday"]}/>
                 </div>
                 <div>
@@ -87,7 +87,7 @@ class CarouselDay extends React.Component {
                     <ListResult list={this.state["Wednesday"]}/>
                 </div>
                 <div>
-                    <h3>Tuesday</h3>
+                    <h3>Thursday</h3>
                     <ListResult list={this.state["Thursday"]}/>
                 </div>
                 <div>
