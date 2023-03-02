@@ -1,6 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import ListResult from "./listResult";
 import React from "react";
+import Footer from './footer';
 
 class CarouselDay extends React.Component {
     state = {
@@ -73,6 +74,7 @@ class CarouselDay extends React.Component {
 
     render() {
         return (
+            <>
             <Carousel autoPlay={false} showThumbs={false} onChange={(activeIndex) => this.setState({...this.state, activeIndex: activeIndex})} style={{width: '50%'}}>
                 <div>
                     <h3>Monday</h3>
@@ -107,6 +109,8 @@ class CarouselDay extends React.Component {
                     
                 </div>
             </Carousel>
+            <Footer products={this.state[this.getDay(this.state.activeIndex)]}/>
+            </>
         );
     }
 }
