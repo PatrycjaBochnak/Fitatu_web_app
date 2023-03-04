@@ -15,7 +15,7 @@ class Footer extends React.Component {
         let sum = 0;
         if (array && array.length > 0) {
             for (let i = 0; i < array.length; i += 1) {
-                const element = array[i][property];
+                 const element = array[i]["nutrition"]["fat"];
                 if (element) {
                     sum += Number(element.replace("g", ""));
                 }
