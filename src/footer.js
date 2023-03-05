@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class Footer extends React.Component {
     countFat = () => {
         let fat = 0;

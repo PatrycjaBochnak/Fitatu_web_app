@@ -53,7 +53,7 @@ class Searcher extends React.Component {
                                     <div className="col-md-1">{this.state.recipes[key].nutrition.carbs}</div>
                                     <div className="col-md-1">{this.state.recipes[key].nutrition.protein}</div>
                                     <div className="col-md-2">
-                                            <select name="day" onChange={(e) => {console.log(e.target); this.props. setCurrentProduct({title: this.state.recipes[key].title, nutrition: this.state.recipes[key].nutrition, partOfDay: e.target.value})}} style={{width: "90%"}}>
+                                            <select name="day" onChange={(e) => {console.log(e.target); this.props.setCurrentProduct({title: this.state.recipes[key].title, nutrition: this.state.recipes[key].nutrition, partOfDay: e.target.value})}} style={{width: "90%"}}>
                                                 <option value={"choose part of day"}>
                                                     Choose 
                                                 </option>                                              
