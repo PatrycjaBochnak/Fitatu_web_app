@@ -11,12 +11,12 @@ function NavBar () {
             <div className="navBar">
                 <img src={logo} alt="logo"/>
                     <div className="buttons">
-                        <Link to="/">Home</Link>
-                        <Link to="/">BMI calculator</Link>
-                        <Link to="/">About</Link>
+                        <Link to="/contact">Contact</Link>
                     </div>
             </div>
-                <Route path="/contact" exact>
+                <Route path="/" exact>
+                </Route>
+                <Route path="/contact">
                     <Contact/>
                 </Route>
         </Router>
