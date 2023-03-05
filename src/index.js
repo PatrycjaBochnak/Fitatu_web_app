@@ -9,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render (
   <React.StrictMode>
+    {/* dodaje tutej BrowserRouter (przeniesiony z navBar.js) */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
