@@ -3,6 +3,7 @@ import logo from "./images/logo.png";
 import {
     BrowserRouter as Router, Route, Link
 } from "react-router-dom";
+import Contact from "./contact";
 
 function NavBar () {
     return (
