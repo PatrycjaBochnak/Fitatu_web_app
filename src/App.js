@@ -26,13 +26,11 @@ class App extends React.Component {
         return (
             <Routes>
                 <Route element={ <Layout /> } />
-                    <Route path="/main" element={<><div className="appContainer"/><Searcher setCurrentProduct={this.setCurrentProduct} />
-                    <CarouselDay product={this.state.product} 
-                    
-                    <Route path="/contact" element={<Contact />} />
-
-                <Route path="*" element={<div><h1>ERROR 404</h1><h2>Taka strona nie istnieje</h2>} />
-                </></div> }
+                <Route path="/main" element={<><div className="appContainer"/> <Searcher setCurrentProduct={this.setCurrentProduct} /> </> } />
+                <CarouselDay product={this.state.product} />
+                <Route element={ <NavBar/> } />
+                <Route path="/contact" element={ <Contact /> } />
+                <Route path="*" element={<div><h1>ERROR 404</h1><h2>Taka strona nie istnieje</h2> </div> } /> 
             </Routes>
         );
     }
