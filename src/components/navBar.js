@@ -7,7 +7,6 @@ function NavBar ({children}) {
         <div className="navBar">
             <img src={logo} alt="logo"/>
             <div className="buttons">
-                {/* tu pozostawiam tylko linki kierujące na ten cały routing */}
                 <Link to="/">HomePage</Link>
                 <Link to="/contact">Contact</Link>
             </div>
